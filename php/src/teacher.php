@@ -14,7 +14,7 @@
     <nav class="navbar1">
         <div class="container-fluid">
             <a class="navbar-brand">สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง วิทยาเขตชุมพรเขตรอุดมศักดิ์</a>
-            <a class="navbar-brand" href="#">ออกจากระบบ</a>
+            <a class="navbar-brand" href="index.php">ออกจากระบบ</a>
         </div>
     </nav>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -36,7 +36,7 @@
             </div>
 
             <!-- โลโก้ที่อยู่ข้างๆ Dropdown -->
-            <a class="navbar-brand ms-3" href="/home">
+            <a class="navbar-brand ms-3" href="home.php">
                 <img src="assets/images/l.png" alt="Logo" style="width: 190px; height: auto;">
             </a>
 
@@ -49,10 +49,10 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/home">หน้าหลัก</a>
+                        <a class="nav-link" href="home.php">หน้าหลัก</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/profile">ข้อมูลส่วนตัว</a>
+                        <a class="nav-link" href="profile.php">ข้อมูลส่วนตัว</a>
                     </li>
                 </ul>
             </div>
@@ -63,7 +63,7 @@
                 <img src="assets/images/p.png" alt="Logo" class="logo">
                 <h1 class="title">บุคลากร CE</h1>
             </span>
-            <button type="button" class="btn rounded-pill btn-light" onclick="window.location.href='/home'">ย้อนกลับ</button>
+            <button type="button" class="btn rounded-pill btn-light" onclick="window.location.href='home.php'">ย้อนกลับ</button>
         </div>
         <div class="container-w">
         <div class="profile">

@@ -1,166 +1,104 @@
-<?php
-$professors = [
-    [
-        'name' => 'ดร.รัตติกร สมบัติแก้ว',
-        'nickname' => 'อาจารย์จุ๋ม',
-        'birthdate' => '32/12/1970',
-        'phone' => '095-187-3785',
-        'line' => 'aj.jum',
-        'email' => 'aj.rattikorn@kmitl.ac.th',
-        'image' => 'path_to_image2.jpg'
-    ],
-    [
-        'name' => 'อาจารย์อรรถศาสตร์ นาคเทวัญ',
-        'nickname' => 'อาจารย์อ๊อด',
-        'birthdate' => '32/12/1970',
-        'phone' => '095-187-3785',
-        'line' => 'aj.ood',
-        'email' => 'aj.athasar@kmitl.ac.th',
-        'image' => 'path_to_image3.jpg'
-    ],
-    [
-        'name' => 'ว่าที่ ร.ต.ศิลา ศิริมาสกุล',
-        'nickname' => 'อาจารย์ศิลา',
-        'birthdate' => '32/12/1970',
-        'phone' => '095-187-3785',
-        'line' => 'aj.silar',
-        'email' => 'aj.silar@kmitl.ac.th',
-        'image' => 'path_to_image2.jpg'
-    ],
-    [
-        'name' => 'อาจารย์นภัสรพี สิทธิวัจน์',
-        'nickname' => 'อาจารย์แฮปปี้',
-        'birthdate' => '32/12/1970',
-        'phone' => '095-187-3785',
-        'line' => 'aj.happy',
-        'email' => 'aj.happy@kmitl.ac.th',
-        'image' => 'path_to_image3.jpg'
-    ]
-];
-?>
-
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ข้อมูลอาจารย์</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #007bff;
-            padding: 15px;
-            color: white;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
-        }
-        .profile {
-            background: white;
-            margin: 15px 0;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .profile img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-right: 20px;
-        }
-        .details p {
-            margin: 5px 0;
-        }
-        .header-ce {
-            text-align: center;
-            font-size: 24px;
-            margin: 20px 0;
-        }
-        .header-personnel {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .popup-hbd {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            padding: 20px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-        }
-        .popup-hbd .close-btn {
-            background: red;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-            float: right;
-        }
-    </style>
+    <title>นักศึกษา & บุคลากร CE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="student.css">
 </head>
+
 <body>
-    <app-bar></app-bar>
-    <app-navbar></app-navbar>
+    <nav class="navbar1">
+        <div class="container-fluid">
+            <a class="navbar-brand">สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง วิทยาเขตชุมพรเขตรอุดมศักดิ์</a>
+            <a class="navbar-brand" href="#">ออกจากระบบ</a>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <!-- 3 ขีด Hamburger Menu (Dropdown) -->
+            <div class="dropdown">
+                <button class="btn btn-light" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span> <!-- 3 ขีด (Hamburger Icon) -->
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#">นักศึกษา & บุคลากร CE</a></li>
+                    <li><a class="dropdown-item" href="#">ศิษย์เก่า CE & ITE</a></li>
+                    <li><a class="dropdown-item" href="#">ครุภัณฑ์การศึกษา CE</a></li>
+                    <li><a class="dropdown-item" href="#">ฝึกงาน & สหกิจศึกษา</a></li>
+                    <li><a class="dropdown-item" href="#">ข่าวสาร & กิจกรรมของหลักสูตร</a></li>
+                    <li><a class="dropdown-item" href="#">หลักสูตร & แผนการเรียน CE</a></li>
+                    <li><a class="dropdown-item" href="#">แต้มบุญ</a></li>
+                </ul>
+            </div>
 
-    <div class="header-ce">
-        <h1>นักศึกษา & บุคลากร CE</h1>
-    </div>
+            <!-- โลโก้ที่อยู่ข้างๆ Dropdown -->
+            <a class="navbar-brand ms-3" href="/home">
+                <img src="assets/images/l.png" alt="Logo" style="width: 190px; height: auto;">
+            </a>
 
+            <!-- 3 ขีด Hamburger Menu สำหรับเมนูในขนาดเล็ก -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- เมนูที่มีอยู่ทางขวา -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home">หน้าหลัก</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/profile">ข้อมูลส่วนตัว</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="header-container">
         <span class="badge text-bg-primary header-content">
-            <img src="path_to_logo.jpg" alt="Logo" class="logo">
-            <h1 class="title">ข้อมูลอาจารย์</h1>
+            <img src="assets/images/ce1.png" alt="Logo" class="logo">
+            <h1 class="title">นักศึกษา CE</h1>
         </span>
         <button type="button" class="btn rounded-pill btn-light" onclick="window.location.href='/home'">ย้อนกลับ</button>
     </div>
 
-    <div class="container">
-        <?php foreach ($professors as $professor): ?>
-        <div class="profile">
-            <img src="<?= $professor['image'] ?>" alt="Profile Picture" class="profile-img">
-            <div class="info">
-                <div class="ti">
-                    <div class="triangle"></div>
-                    <span><?= $professor['name'] ?></span>
+    <div class="container text-center">
+        <div class="row align-items-center">
+            <div class="col">
+                <div class="button-container">
+                    <button type="button" class="btn1 rounded-pill btn-light" onclick="window.location.href='/studentyear1'">1</button>
+                    <p>นักศึกษาชั้นปีที่ 1</p>
                 </div>
-                <div class="details">
-                    <p><strong>ชื่อเล่น :</strong> <?= $professor['nickname'] ?></p>
-                    <p><strong>วันเกิด :</strong> <?= $professor['birthdate'] ?></p>
-                    <p><strong>เบอร์ติดต่อ :</strong> <?= $professor['phone'] ?></p>
-                    <p><strong>ID LINE :</strong> <?= $professor['line'] ?></p>
-                    <p><strong>E-MAIL :</strong> <?= $professor['email'] ?></p>
+            </div>
+            <div class="col">
+                <div class="button-container">
+                    <button type="button" class="btn1 rounded-pill btn-light" onclick="window.location.href='/studentyear2'">2</button>
+                    <p>นักศึกษาชั้นปีที่ 2</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="button-container">
+                    <button type="button" class="btn1 rounded-pill btn-light" onclick="window.location.href='/studentyear3'">3</button>
+                    <p>นักศึกษาชั้นปีที่ 3</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="button-container">
+                    <button type="button" class="btn1 rounded-pill btn-light" onclick="window.location.href='/studentyear4'">4</button>
+                    <p>นักศึกษาชั้นปีที่ 4</p>
                 </div>
             </div>
         </div>
-        <?php endforeach; ?>
     </div>
 
-    <div class="header-personnel">
-        <button type="button" class="btn rounded-pill btn-light" onclick="window.location.href='/teacher'">Personnel CE</button>
-    </div>
+    
 
-    <div class="popup-hbd" id="popupHBD">
-        <button class="close-btn" onclick="document.getElementById('popupHBD').style.display='none'">×</button>
-        <h3>ขอให้โค้ดไม่บั๊ก และชีวิตไม่มี 404 นะ!</h3>
-        <img src="assets/images/cake.png" alt="Cake" class="cake">
-    </div>
 
-    <app-footer></app-footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

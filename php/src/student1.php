@@ -66,6 +66,38 @@
         <button type="button" class="btn rounded-pill btn-light" onclick="window.location.href='/home'">ย้อนกลับ</button>
     </div>
 
+    <div class="container text-center">
+        <div class="row align-items-center">
+            <div class="col">
+                <div class="button-container">
+                    <button type="button" class="btn1 rounded-pill btn-light" onclick="window.location.href='/studentyear1'">1</button>
+                    <p>นักศึกษาชั้นปีที่ 1</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="button-container">
+                    <button type="button" class="btn1 rounded-pill btn-light" onclick="window.location.href='/studentyear2'">2</button>
+                    <p>นักศึกษาชั้นปีที่ 2</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="button-container">
+                    <button type="button" class="btn1 rounded-pill btn-light" onclick="window.location.href='/studentyear3'">3</button>
+                    <p>นักศึกษาชั้นปีที่ 3</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="button-container">
+                    <button type="button" class="btn1 rounded-pill btn-light" onclick="window.location.href='/studentyear4'">4</button>
+                    <p>นักศึกษาชั้นปีที่ 4</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

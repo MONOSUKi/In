@@ -14,7 +14,7 @@
     <nav class="navbar1">
         <div class="container-fluid">
             <a class="navbar-brand">สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง วิทยาเขตชุมพรเขตรอุดมศักดิ์</a>
-            <a class="navbar-brand" href="#">ออกจากระบบ</a>
+            <a class="navbar-brand" href="index.php">ออกจากระบบ</a>
         </div>
     </nav>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -36,7 +36,7 @@
             </div>
 
             <!-- โลโก้ที่อยู่ข้างๆ Dropdown -->
-            <a class="navbar-brand ms-3" href="/home">
+            <a class="navbar-brand ms-3" href="home.php">
                 <img src="assets/images/l.png" alt="Logo" style="width: 190px; height: auto;">
             </a>
 

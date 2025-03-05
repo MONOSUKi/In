@@ -11,12 +11,16 @@
 </head>
 
 <body>
-    <nav class="navbar1">
+    <nav class="navbar1 navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand">สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง วิทยาเขตชุมพรเขตรอุดมศักดิ์</a>
-            <a class="navbar-brand" href="#">ออกจากระบบ</a>
+            <div class="d-flex ms-auto">
+                <a class="navbar-brand" href="index.php">ออกจากระบบ</a>
+            </div>
         </div>
     </nav>
+
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <!-- 3 ขีด Hamburger Menu (Dropdown) -->
@@ -36,7 +40,7 @@
             </div>
 
             <!-- โลโก้ที่อยู่ข้างๆ Dropdown -->
-            <a class="navbar-brand ms-3" href="/home">
+            <a class="navbar-brand ms-3" href="home.php">
                 <img src="assets/images/l.png" alt="Logo" style="width: 190px; height: auto;">
             </a>
 
@@ -49,10 +53,10 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/home">หน้าหลัก</a>
+                        <a class="nav-link" href="home.php">หน้าหลัก</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/profile">ข้อมูลส่วนตัว</a>
+                        <a class="nav-link" href="profile.php">ข้อมูลส่วนตัว</a>
                     </li>
                 </ul>
             </div>
@@ -71,25 +75,25 @@
         <div class="row align-items-center">
             <div class="col">
                 <div class="button-container">
-                <button type="button" class="btn1 rounded-pill btn-light" onclick="window.location.href='student1.php'">1</button>
+                    <button type="button" class="btn1 rounded-pill btn-light" onclick="window.location.href='student1.php'">1</button>
                     <p>นักศึกษาชั้นปีที่ 1</p>
                 </div>
             </div>
             <div class="col">
                 <div class="button-container">
-                <button type="button" class="btn1 rounded-pill btn-light" onclick="window.location.href='student2.php'">2</button>
+                    <button type="button" class="btn1 rounded-pill btn-light" onclick="window.location.href='student2.php'">2</button>
                     <p>นักศึกษาชั้นปีที่ 2</p>
                 </div>
             </div>
             <div class="col">
                 <div class="button-container">
-                <button type="button" class="btn1 rounded-pill btn-light" onclick="window.location.href='student3.php'">3</button>
+                    <button type="button" class="btn1 rounded-pill btn-light" onclick="window.location.href='student3.php'">3</button>
                     <p>นักศึกษาชั้นปีที่ 3</p>
                 </div>
             </div>
             <div class="col">
                 <div class="button-container">
-                <button type="button" class="btn1 rounded-pill btn-light" onclick="window.location.href='student4.php'">4</button>
+                    <button type="button" class="btn1 rounded-pill btn-light" onclick="window.location.href='student4.php'">4</button>
                     <p>นักศึกษาชั้นปีที่ 4</p>
                 </div>
             </div>

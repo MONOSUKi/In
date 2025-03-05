@@ -64,7 +64,6 @@
     </nav>
 
     <div class="container">
-        <button type="button" class="btn rounded-pill btn-light" onclick="window.location.href='home.php'">ย้อนกลับ</button>
 
         <div class="announcement">
             <button class="announcement-header">ประกาศ</button>

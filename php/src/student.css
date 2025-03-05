@@ -1,0 +1,121 @@
+.navbar1 {
+    background-color: #203864 !important;
+    padding: 5px 20px;
+}
+
+.navbar1 .navbar-brand {
+    color: #ffffff !important;
+    font-size: 16px;
+    /* ปรับขนาดฟอนต์ */
+}
+
+.navbar-toggler {
+    background-color: #A1E3F9;
+    /* ปุ่มสีน้ำเงิน */
+    border: none;
+    /* เอาขอบออก */
+}
+
+body {
+    background-color: #d4d4d4; /* สีเทาอ่อน */
+}
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    /* จัดให้มีระยะห่างระหว่างเนื้อหาทั้งสอง */
+    align-items: center;
+    /* จัดให้อยู่ในแนวเดียวกัน */
+    margin-top: 20px;
+    /* เว้นระยะห่างจาก Navbar */
+    padding-left: 20px;
+    /* เว้นระยะห่างจากขอบซ้าย */
+}
+
+.header-content {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    /* ลดระยะห่างระหว่างรูปกับข้อความ */
+    padding: 2px 20px 2px 5px;
+    /* ลด padding ด้านขวาและซ้าย */
+    border-radius: 10px;
+    max-width: fit-content;
+    background: linear-gradient(to right, #FFFFFF 24%, #203864 31%);
+    color: white;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+.title {
+    margin: 0;
+}
+
+.btn {
+    margin-left: auto;
+    /* ช่วยจัดให้ปุ่มอยู่ทางขวาสุด */
+    margin-right: 20px;
+    /* เว้นระยะห่างจากขอบขวา */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    /* เพิ่มเงาให้ปุ่ม */
+    border: none;
+    /* เอาขอบออกจากปุ่ม */
+    padding: 10px 30px;
+    /* เพิ่มขนาดปุ่มให้ใหญ่ขึ้น */
+    border-radius: 30px;
+    /* ทำมุมปุ่มให้โค้ง */
+    font-size: 24px;
+    /* ปรับขนาดฟอนต์ให้ใหญ่ขึ้น */
+    color: #203864;
+    /* เปลี่ยนสีฟอนต์เป็นสีเทาเข้ม */
+}
+
+.excel-container {
+    border-bottom: 5px solid transparent;
+    /* ทำให้เส้นกรอบเป็นโปร่งใส */
+    background-image: linear-gradient(to right, #203864 43%, #F79B5B 50%);
+    /* ไล่สีจากซ้ายไปขวา */
+    padding-bottom: 20px;
+    /* เว้นระยะห่างจากเนื้อหาด้านล่าง */
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+    /* กำหนดขนาดของเส้น */
+}
+
+/* สไตล์ของกล่องหัวข้อ */
+.welcome-box {
+    background-color: white;
+    /* สีพื้นหลังเป็นสีขาว */
+    border: 2px solid #203864;
+    /* เส้นกรอบด้านล่างสีดำ */
+    border-radius: 35px;
+    padding: 20px;
+    /* เพิ่มระยะห่างภายในกล่อง */
+    width: 250px;
+    /* ให้ขนาดกล่องพอดีกับข้อความ */
+    height: 77px;
+    margin: 20px auto;
+    /* จัดตำแหน่งให้อยู่กลางหน้าจอ */
+    text-align: center;
+    /* ให้อยู่กลางทั้งในแนวนอนและแนวตั้ง */
+}
+
+/* สไตล์ของหัวข้อ */
+.welcome-title {
+    font-size: 24px;
+    /* ขนาดตัวอักษร */
+    color: #203864;
+    /* สีตัวอักษร */
+    margin: 0;
+    /* ลบระยะห่างที่ไม่ต้องการ */
+}
+
+.container .row {
+    margin-bottom: 40px;
+    /* เพิ่มระยะห่างระหว่างแถว */
+}

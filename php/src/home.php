@@ -104,11 +104,11 @@
     </div>
 
     <div class="header-pic">
-        <img src="assets/images/teacher.png" alt="Pic" class="picture" onclick="window.location.href='teacher.php'" style="cursor: pointer;">
+        <img src="assets/images/teacher.png" alt="Pic" class="picture" onclick="window.location.href='/teacher.php'" style="cursor: pointer;">
     </div>
 
     <div class="header-personnel">
-        <button type="button" class="btn rounded-pill btn-light" onclick="window.location.href='teacher.php'">Personnel CE</button>
+        <button type="button" class="btn rounded-pill btn-light" onclick="window.location.href='/teacher.php'">Personnel CE</button>
     </div>
 
 <footer class="footer" style="background-color: #203864;">

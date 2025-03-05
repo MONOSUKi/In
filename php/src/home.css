@@ -233,8 +233,18 @@ ul.list-unstyled li.phone i {
     width: 1100px;
     height: auto;
 }
-.header-personnel {
+.btn {
+    border: none;
+    border-radius: 50px;
+    font-size: 40px;
+    max-width: fit-content;
+    padding: 10px 20px;  /* จัดให้ข้อความพอดีกับกล่อง */
+    margin: 20px auto;  /* จัดปุ่มให้อยู่กลางหน้าจอ */
+    text-align: center; /* ให้อยู่กลางทั้งในแนวนอนและแนวตั้ง */
+    color: #203864;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin: 20px 0;
-    font-size: 50px;
 }

@@ -76,17 +76,21 @@ body {
 }
 
 .excel-container {
-    border-bottom: 5px solid transparent;
-    /* ทำให้เส้นกรอบเป็นโปร่งใส */
-    background-image: linear-gradient(to right, #203864 43%, #F79B5B 50%);
-    /* ไล่สีจากซ้ายไปขวา */
+    position: relative;
     padding-bottom: 20px;
-    /* เว้นระยะห่างจากเนื้อหาด้านล่าง */
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: 100% 2px;
-    /* กำหนดขนาดของเส้น */
 }
+
+/* ใช้ ::before เพื่อสร้างเส้นอยู่ด้านบน welcome-box */
+.excel-container::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 100%;  /* ดันเส้นขึ้นไปอยู่ด้านบน */
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #203864 43%, #F79B5B 50%);
+}
+
 
 /* สไตล์ของกล่องหัวข้อ */
 .welcome-box {
@@ -122,7 +126,7 @@ body {
 }
 
 .container {
-    padding-top: 100px;
+    padding-top: 50px;
     /* เพิ่ม padding ด้านบนเท่านั้น */
 }
 
@@ -170,4 +174,135 @@ body {
     /* เว้นระยะห่างระหว่างปุ่มกับข้อความ */
     font-size: 18px;
     color: #000;
+}
+
+.card {
+    width: 600px;
+    position: relative;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    border: 2px solid #000000;
+    /* ขอบสีดำ */
+    flex-direction: column;
+    /* เรียงองค์ประกอบจากบนลงล่าง */
+}
+
+.card-header {
+    background-color: #519ae3;
+    /* สีฟ้า */
+    height: auto;
+    width: 100%;
+    filter: drop-shadow(6px 6px 6px rgba(0, 0, 0, 0.25));
+    /* เงา */
+    border-bottom: 2px solid #000000;
+    /* ขอบสีดำที่ด้านล่าง */
+    padding: 20px;
+    color: white;
+    /* ตัวอักษรสีขาว */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* ทำให้ตัวอักษรอยู่ที่ซ้าย */
+}
+
+
+.card-title,
+.card-text {
+    margin: 10;
+    /* เพิ่มระยะห่างจากด้านบนและด้านล่าง */
+    font-size: 24px;
+    /* ขนาดฟอนต์ที่ต้องการ */
+}
+
+.card-body {
+    padding: 20px;
+    text-align: left;
+    background-color: white;
+    flex: 1;
+    /* ขยายเนื้อหาภายใน */
+}
+
+.card-img-top {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    /* ให้รูปอยู่มุมขวาบน */
+    right: 0;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 0;
+    /* ทำให้รูปเป็นสี่เหลี่ยม */
+}
+
+.card-body p {
+    font-size: 20px;
+    /* ขนาดฟอนต์ของข้อความทั่วไป */
+    line-height: 1.5;
+    /* ระยะห่างบรรทัด */
+}
+
+.card-body strong {
+    font-size: 18px;
+    /* ขนาดฟอนต์สำหรับคำที่อยู่ใน <strong> */
+    font-weight: bold;
+    /* ทำให้ตัวหนา */
+}
+
+.footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #203864;
+    /* สีฟ้าหรือสีน้ำเงิน */
+}
+
+.footer h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.footer .list-unstyled li {
+    margin-bottom: 10px;
+}
+
+.footer .list-unstyled a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer .list-unstyled a:hover {
+    color: #ffb3b3;
+    /* สีเปลี่ยนเมื่อ hover */
+}
+
+.footer .form-control {
+    width: 100%;
+}
+
+.text-custom {
+    color: #F79B5B !important;
+}
+
+/* เปลี่ยนสีข้อความใน li ให้เป็น F79B5B */
+ul.list-unstyled li {
+    color: #F79B5B;
+}
+
+/* เปลี่ยนสีไอคอนให้เป็นสีเดียวกัน */
+ul.list-unstyled li i {
+    color: #F79B5B;
+}
+
+/* กำหนดสีของเบอร์โทรศัพท์ให้เป็นสีขาว */
+ul.list-unstyled li.phone {
+    color: white;
+}
+
+ul.list-unstyled li.phone i {
+    color: white;
 }

@@ -49,10 +49,10 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/home">หน้าหลัก</a>
+                        <a class="nav-link" href="/home.php">หน้าหลัก</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/profile">ข้อมูลส่วนตัว</a>
+                        <a class="nav-link" href="/profile.php">ข้อมูลส่วนตัว</a>
                     </li>
                 </ul>
             </div>
@@ -63,7 +63,7 @@
                 <img src="assets/images/p.png" alt="Logo" class="logo">
                 <h1 class="title">บุคลากร CE</h1>
             </span>
-            <button type="button" class="btn rounded-pill btn-light" onclick="window.location.href='/home'">ย้อนกลับ</button>
+            <button type="button" class="btn rounded-pill btn-light" onclick="window.location.href='/home.php'">ย้อนกลับ</button>
         </div>
         <div class="container-w">
         <div class="profile">
@@ -135,7 +135,7 @@
         </div>
     </div>
 
-    <footer class="footer" style="background-color: #203864;">
+<footer class="footer" style="background-color: #203864;">
     <div class="container p-4">
         <!-- First row for links -->
         <div class="row justify-content-center">
@@ -169,7 +169,8 @@
             </div>            
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 

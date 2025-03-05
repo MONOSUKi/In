@@ -76,38 +76,38 @@ body {
 }
 
 .excel-container {
-    position: relative;
+    border-bottom: 5px solid transparent;
+    /* ทำให้เส้นกรอบเป็นโปร่งใส */
+
+    /* ไล่สีจากซ้ายไปขวา */
     padding-bottom: 20px;
+    /* เว้นระยะห่างจากเนื้อหาด้านล่าง */
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+    /* กำหนดขนาดของเส้น */
+}
+.w-container {
+    border-bottom: 5px solid transparent;
+    background-image: linear-gradient(to right, #203864 43%, #F79B5B 50%);
+    padding-bottom: 20px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+    display:flex;
+    justify-content:center;
 }
 
-/* ใช้ ::before เพื่อสร้างเส้นอยู่ด้านบน welcome-box */
-.excel-container::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 100%;  /* ดันเส้นขึ้นไปอยู่ด้านบน */
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(to right, #203864 43%, #F79B5B 50%);
-}
-
-
-/* สไตล์ของกล่องหัวข้อ */
 .welcome-box {
     background-color: white;
-    /* สีพื้นหลังเป็นสีขาว */
     border: 2px solid #203864;
-    /* เส้นกรอบด้านล่างสีดำ */
     border-radius: 35px;
     padding: 20px;
-    /* เพิ่มระยะห่างภายในกล่อง */
     width: 250px;
-    /* ให้ขนาดกล่องพอดีกับข้อความ */
     height: 77px;
     margin: 20px auto;
-    /* จัดตำแหน่งให้อยู่กลางหน้าจอ */
     text-align: center;
-    /* ให้อยู่กลางทั้งในแนวนอนและแนวตั้ง */
+    margin-bottom: 10px;
 }
 
 /* สไตล์ของหัวข้อ */
@@ -126,7 +126,7 @@ body {
 }
 
 .container {
-    padding-top: 50px;
+    padding-top: 30px;
     /* เพิ่ม padding ด้านบนเท่านั้น */
 }
 

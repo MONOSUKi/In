@@ -58,7 +58,7 @@
             </div>
         </div>
     </nav>
-    
+
     <div class="header-container">
         <span class="badge text-bg-primary header-content">
             <img src="assets/images/ce1.png" alt="Logo" class="logo">
@@ -133,12 +133,47 @@
                 </div>
             </div>
         </div>
-
-        <div class="welcome-box">
-            <h2 class="welcome-title">ชั้นปีที่ 1</h2>
+        <div class="w-container">
+            <div class="welcome-box">
+                <h2 class="welcome-title">ชั้นปีที่ 1</h2>
+            </div>
         </div>
 
         <div class="container text-center">
+            <div class="row gy-4">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">67200xxx</h5>
+                            <h5 class="card-text">นาย มิน ใจตี</h5>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>ชื่อเล่น:</strong> มิน</p>
+                            <p><strong>วันเกิด:</strong> 01/01/2000</p>
+                            <p><strong>เบอร์โทร:</strong> 091-234-5678</p>
+                            <p><strong>ที่อยู่:</strong> 44/2</p>
+                            <p><strong>เบอร์โทรผู้ปกครอง:</strong> -</p>
+                        </div>
+                        <img src="assets/images/pro.jpg" class="card-img-top" alt="Profile Image">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">67200xxx</h5>
+                            <h5 class="card-text">นาย มิน ใจตี</h5>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>ชื่อเล่น:</strong> มิน</p>
+                            <p><strong>วันเกิด:</strong> 01/01/2000</p>
+                            <p><strong>เบอร์โทร:</strong> 091-234-5678</p>
+                            <p><strong>ที่อยู่:</strong> 44/2</p>
+                            <p><strong>เบอร์โทรผู้ปกครอง:</strong> -</p>
+                        </div>
+                        <img src="assets/images/pro.jpg" class="card-img-top" alt="Profile Image">
+                    </div>
+                </div>
+            </div>
             <div class="row gy-4">
                 <div class="col">
                     <div class="card">

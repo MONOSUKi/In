@@ -18,30 +18,32 @@
             <div class="content">
                 <h1>LOGIN TO KMITL CE</h1>
             </div>
-            <div class="login-box">
-            </div>
-            <div class="email-box">
-                <!-- กล่องแรกสำหรับ Email -->
-                <div class="input-box">
-                    <div class="icon">
-                        <i class="fas fa-envelope"></i> <!-- ใช้ไอคอนจดหมาย -->
-                    </div>
-                    <input type="email" placeholder="Email" />
-                </div>
 
-                <!-- กล่องที่สองสำหรับ Password -->
+            
+
+            
+            <form action="login.php" method="post">
                 <div class="input-box">
-                    <div class="icon">
-                        <i class="fas fa-lock"></i> <!-- ใช้ไอคอนพาสเวิร์ด -->
-                    </div>
-                    <input type="password" placeholder="Password" />
+                    <input type="email" name="email" placeholder="Email" required />
                 </div>
-            </div>
-            <div class="Login-box">
-                <a class="nav-link" href="/home.php">
-                    <button class="Login">LOGIN</button>
-                </a>
-            </div>
+                <div class="input-box">
+                    <input type="password" name="password" placeholder="Password" required />
+                </div>
+                <button type="submit" class="Login">LOGIN</button>
+
+                 <!-- แสดงข้อความผิดพลาด -->
+                <?php if (isset($_SESSION['error'])): ?>
+                    <p class="error"><?php echo $_SESSION['error']; unset($_SESSION['error']); ?></p>
+                <?php endif; ?>
+            </form>
+            <style>
+                .error {
+                    color: red;
+                    font-size: 14px;
+                    text-align: center;
+                    margin-top: 10px;
+                }
+            </style>
         </div>
         <div class="right">
             <div class="contents">

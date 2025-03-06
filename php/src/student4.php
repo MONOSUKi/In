@@ -1,3 +1,26 @@
+<?php
+// เชื่อมต่อกับฐานข้อมูล
+$servername = "db";  // ชื่อเซิร์ฟเวอร์
+$username = "root";   // ชื่อผู้ใช้ฐานข้อมูล
+$password = "123456"; // รหัสผ่าน
+$dbname = "students"; // ชื่อฐานข้อมูล
+
+$conn = new mysqli("db", "root", "123456", "students");
+
+// ตรวจสอบการเชื่อมต่อ
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// เลือกข้อมูลจากฐานข้อมูล
+$sql = "SELECT student_id, full_name, nickname, birthdate, phone FROM user WHERE id = 4 LIMIT 46";
+$result = $conn->query($sql);
+
+// ตรวจสอบว่า query สำเร็จหรือไม่
+if ($result === false) {
+    die("Query failed: " . $conn->error);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,7 +89,7 @@
             <img src="assets/images/ce1.png" alt="Logo" class="logo">
             <h1 class="title">นักศึกษา CE</h1>
         </span>
-        <button type="button" class="btn rounded-pill btn-light" onclick="window.location.href='home.php'">ย้อนกลับ</button>
+        <button type="button" class="btn rounded-pill btn-light" onclick="window.location.href='/home.php'">ย้อนกลับ</button>
     </div>
 
     <div class="container text-center">
@@ -137,114 +160,44 @@
         </div>
         <div class="w-container">
             <div class="welcome-box">
-                <h2 class="welcome-title">ชั้นปีที่ 4</h2>
+                <h2 class="welcome-title">ชั้นปีที่ 1</h2>
             </div>
         </div>
 
         <div class="container text-center">
-            <div class="row gy-4">
-                <div class="col">
-                    <div class="card">
-                        <div class="card-header">
-                            <h5 class="card-title">64200xxx</h5>
-                            <h5 class="card-text">นาย มิน ใจตี</h5>
-                        </div>
-                        <div class="card-body">
-                            <p><strong>ชื่อเล่น:</strong> มิน</p>
-                            <p><strong>วันเกิด:</strong> 01/01/2000</p>
-                            <p><strong>เบอร์โทร:</strong> 091-234-5678</p>
-                            <p><strong>ที่อยู่:</strong> 44/2</p>
-                            <p><strong>เบอร์โทรผู้ปกครอง:</strong> -</p>
-                        </div>
-                        <img src="assets/images/pro.jpg" class="card-img-top" alt="Profile Image">
+    <div class="row gy-4">
+        <?php
+        // แสดงข้อมูล 55 ชุด
+        while ($row = $result->fetch_assoc()) {
+            // ดึงข้อมูลจากฐานข้อมูล
+            $studentId = $row['student_id'];
+            $fullname = $row['full_name'];
+            $nickname = $row['nickname'];
+            $birthdate = $row['birthdate'];
+            $phone = $row['phone'];
+        ?>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title"><?php echo htmlspecialchars($studentId); ?></h5>
+                        <h5 class="card-text"><?php echo htmlspecialchars($fullname); ?></h5>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="card-header">
-                            <h5 class="card-title">64200xxx</h5>
-                            <h5 class="card-text">นาย มิน ใจตี</h5>
-                        </div>
-                        <div class="card-body">
-                            <p><strong>ชื่อเล่น:</strong> มิน</p>
-                            <p><strong>วันเกิด:</strong> 01/01/2000</p>
-                            <p><strong>เบอร์โทร:</strong> 091-234-5678</p>
-                            <p><strong>ที่อยู่:</strong> 44/2</p>
-                            <p><strong>เบอร์โทรผู้ปกครอง:</strong> -</p>
-                        </div>
-                        <img src="assets/images/pro.jpg" class="card-img-top" alt="Profile Image">
+                    <div class="card-body">
+                        <p><strong>ชื่อเล่น:</strong> <?php echo htmlspecialchars($nickname); ?></p>
+                        <p><strong>วันเกิด:</strong> <?php echo htmlspecialchars($birthdate); ?></p>
+                        <p><strong>เบอร์โทร:</strong> <?php echo htmlspecialchars($phone); ?></p>
                     </div>
+                    <img src="assets/images/pro.jpg" class="card-img-top" alt="Profile Image">
                 </div>
             </div>
-            <div class="row gy-4">
-                <div class="col">
-                    <div class="card">
-                        <div class="card-header">
-                            <h5 class="card-title">64200xxx</h5>
-                            <h5 class="card-text">นาย มิน ใจตี</h5>
-                        </div>
-                        <div class="card-body">
-                            <p><strong>ชื่อเล่น:</strong> มิน</p>
-                            <p><strong>วันเกิด:</strong> 01/01/2000</p>
-                            <p><strong>เบอร์โทร:</strong> 091-234-5678</p>
-                            <p><strong>ที่อยู่:</strong> 44/2</p>
-                            <p><strong>เบอร์โทรผู้ปกครอง:</strong> -</p>
-                        </div>
-                        <img src="assets/images/pro.jpg" class="card-img-top" alt="Profile Image">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="card-header">
-                            <h5 class="card-title">64200xxx</h5>
-                            <h5 class="card-text">นาย มิน ใจตี</h5>
-                        </div>
-                        <div class="card-body">
-                            <p><strong>ชื่อเล่น:</strong> มิน</p>
-                            <p><strong>วันเกิด:</strong> 01/01/2000</p>
-                            <p><strong>เบอร์โทร:</strong> 091-234-5678</p>
-                            <p><strong>ที่อยู่:</strong> 44/2</p>
-                            <p><strong>เบอร์โทรผู้ปกครอง:</strong> -</p>
-                        </div>
-                        <img src="assets/images/pro.jpg" class="card-img-top" alt="Profile Image">
-                    </div>
-                </div>
-            </div>
-            <div class="row gy-4">
-                <div class="col">
-                    <div class="card">
-                        <div class="card-header">
-                            <h5 class="card-title">64200xxx</h5>
-                            <h5 class="card-text">นาย มิน ใจตี</h5>
-                        </div>
-                        <div class="card-body">
-                            <p><strong>ชื่อเล่น:</strong> มิน</p>
-                            <p><strong>วันเกิด:</strong> 01/01/2000</p>
-                            <p><strong>เบอร์โทร:</strong> 091-234-5678</p>
-                            <p><strong>ที่อยู่:</strong> 44/2</p>
-                            <p><strong>เบอร์โทรผู้ปกครอง:</strong> -</p>
-                        </div>
-                        <img src="assets/images/pro.jpg" class="card-img-top" alt="Profile Image">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <div class="card-header">
-                            <h5 class="card-title">64200xxx</h5>
-                            <h5 class="card-text">นาย มิน ใจตี</h5>
-                        </div>
-                        <div class="card-body">
-                            <p><strong>ชื่อเล่น:</strong> มิน</p>
-                            <p><strong>วันเกิด:</strong> 01/01/2000</p>
-                            <p><strong>เบอร์โทร:</strong> 091-234-5678</p>
-                            <p><strong>ที่อยู่:</strong> 44/2</p>
-                            <p><strong>เบอร์โทรผู้ปกครอง:</strong> -</p>
-                        </div>
-                        <img src="assets/images/pro.jpg" class="card-img-top" alt="Profile Image">
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php } ?>
+    </div>
+</div>
+
+<?php
+// ปิดการเชื่อมต่อกับฐานข้อมูล
+$conn->close();
+?>
     </div>
 
     <footer class="footer" style="background-color: #203864;">

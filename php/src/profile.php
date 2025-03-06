@@ -1,3 +1,42 @@
+<?php
+session_start();
+
+// ตรวจสอบว่าได้ทำการเข้าสู่ระบบหรือไม่
+if (!isset($_SESSION['email'])) {
+    // ถ้ายังไม่ล็อกอิน ให้ redirect ไปยังหน้า login
+    header("Location: index.php");
+    exit();
+}
+
+// เชื่อมต่อกับฐานข้อมูล
+$conn = new mysqli("db", "root", "123456", "students");
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// ดึงข้อมูลจากฐานข้อมูล
+$email = $_SESSION['email']; // สมมติว่า email ถูกเก็บใน session
+$query = "SELECT * FROM user WHERE email = '$email'";
+$result = $conn->query($query);
+
+// ตรวจสอบผลลัพธ์
+if ($result === false) {
+    die("Query failed: " . $conn->error); // แสดงข้อผิดพลาดจาก query
+}
+
+if ($result->num_rows > 0) {
+    // ดึงข้อมูลผู้ใช้
+    $row = $result->fetch_assoc();
+    echo "รหัสนักศึกษา: " . $row['student_id'];
+    // ทำการแสดงผลข้อมูลที่เหลือ
+} else {
+    echo "ไม่พบข้อมูลผู้ใช้";
+}
+$conn->close();
+?>
+
+<!-- HTML code -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -73,46 +112,32 @@
         <div class="info-card">
             <h2>ข้อมูลส่วนตัวนักศึกษา</h2>
             <form>
-                <label for="citizenId">เลขบัตรประชาชน:</label>
-                <input type="text" id="citizenId" name="citizenId" disabled />
 
                 <label for="studentId">รหัสนักศึกษา:</label>
-                <input type="text" id="studentId" name="studentId" disabled />
+                <input type="text" id="studentId" name="studentId" value="<?php echo $row['student_id']; ?>" disabled />
 
                 <label for="prefix">คำนำหน้า:</label>
-                <input type="text" id="prefix" name="prefix" disabled />
+                <input type="text" id="prefix" name="prefix" value="<?php echo $row['title']; ?>" disabled />
 
                 <label for="fullName">ชื่อ - สกุล:</label>
-                <input type="text" id="fullName" name="fullName" disabled />
+                <input type="text" id="fullName" name="fullName" value="<?php echo $row['full_name']; ?>" disabled />
 
                 <label for="nickname">ชื่อเล่น:</label>
-                <input type="text" id="nickname" name="nickname" disabled />
+                <input type="text" id="nickname" name="nickname" value="<?php echo $row['nickname']; ?>" disabled />
 
                 <label for="birthdate">วัน/เดือน/ปี:</label>
-                <input type="date" id="birthdate" name="birthdate" disabled />
+                <input type="date" id="birthdate" name="birthdate" value="<?php echo $row['birthdate']; ?>" disabled />
 
-                <label for="gender">เพศ:</label>
-                <select id="gender" name="gender" disabled>
-                    <option value="ชาย">ชาย</option>
-                    <option value="หญิง">หญิง</option>
-                    <option value="อื่นๆ">อื่นๆ</option>
-                </select>
+                <label for="sex">เพศ:</label>
+                <input type="text" id="sex" name="sex" value="<?php echo $row['gender']; ?>" disabled />
 
                 <label for="phone">เบอร์โทรศัพท์:</label>
-                <input type="text" id="phone" name="phone" disabled />
+                <input type="text" id="phone" name="phone" value="<?php echo $row['phone']; ?>" disabled />
 
-                <label for="address">ที่อยู่:</label>
-                <textarea id="address" name="address" disabled></textarea>
-
-                <label for="guardian">ผู้ปกครอง:</label>
-                <input type="text" id="guardian" name="guardian" disabled />
-
-                <label for="guardianPhone">เบอร์โทรศัพท์ผู้ปกครอง:</label>
-                <input type="text" id="guardianPhone" name="guardianPhone" disabled />
             </form>
 
-            <button class="edit-btn" onclick="toggleEdit()">แก้ไขข้อมูล</button>
         </div>
+
     </div>
 
     <script>

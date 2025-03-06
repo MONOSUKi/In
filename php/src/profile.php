@@ -134,6 +134,12 @@ $conn->close();
                 <label for="phone">เบอร์โทรศัพท์:</label>
                 <input type="text" id="phone" name="phone" value="<?php echo $row['phone']; ?>" disabled />
 
+                <label for="sex">ที่อยู่:</label>
+                <input type="text" id="sex" name="sex" value="<?php echo $row['address']; ?>" disabled />
+
+                <label for="phone">เบอร์ฉุกเฉิน:</label>
+                <input type="text" id="phone" name="phone" value="<?php echo $row['e_phone']; ?>" disabled />
+
             </form>
 
         </div>

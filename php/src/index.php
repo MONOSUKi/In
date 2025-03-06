@@ -37,9 +37,6 @@
                     <input type="password" placeholder="Password" />
                 </div>
             </div>
-            <div class="for-get-pass">
-                <p>Forgot Password?</p>
-            </div>
             <div class="Login-box">
                 <a class="nav-link" href="/home.php">
                     <button class="Login">LOGIN</button>

@@ -11,12 +11,10 @@
 </head>
 
 <body>
-<nav class="navbar1 navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar1">
         <div class="container-fluid">
             <a class="navbar-brand">สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง วิทยาเขตชุมพรเขตรอุดมศักดิ์</a>
-            <div class="d-flex ms-auto">
-                <a class="navbar-brand" href="index.php">ออกจากระบบ</a>
-            </div>
+            <a class="navbar-brand" href="index.php">ออกจากระบบ</a>
         </div>
     </nav>
 

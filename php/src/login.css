@@ -197,7 +197,7 @@
   }
   
   .Login-box .Login {
-    color: white; /* สีข้อความ */
+    color: white !important; /* สีข้อความ */
     font-size: 18px;
     font-weight: 300px;
     font-family: 'Noto Sans Thai', sans-serif;

@@ -68,7 +68,7 @@
             <img src="assets/images/ce1.png" alt="Logo" class="logo">
             <h1 class="title">นักศึกษา CE</h1>
         </span>
-        <button type="button" class="btn rounded-pill btn-light" onclick="window.location.href='home.php'">ย้อนกลับ</button>
+        <button type="button" class="btn rounded-pill btn-light" onclick="window.location.href='/home.php'">ย้อนกลับ</button>
     </div>
 
     <div class="container text-center">

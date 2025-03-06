@@ -106,8 +106,8 @@ include 'db.php';
     </div>
     <div class="header-container">
         <span class="badge text-bg-primary header-content">
-        <img src="assets/images/p.png" alt="Logo" class="logo">
-        <h1 class="title">บุคลากร CE</h1>
+            <img src="assets/images/p.png" alt="Logo" class="logo">
+            <h1 class="title">บุคลากร CE</h1>
         </span>
     </div>
 
@@ -119,41 +119,88 @@ include 'db.php';
         <button type="button" class="btn rounded-pill btn-light" onclick="window.location.href='/teacher.php'">Personnel CE</button>
     </div>
 
-<footer class="footer" style="background-color: #203864;">
-    <div class="container p-4">
-        <!-- First row for links -->
-        <div class="row justify-content-center">
-            <!-- First column: Quick Links -->
-            <div class="col-md-5">
-                <h5 class="text-white" style="font-size: 1.5rem;">แนะนำ</h5> <!-- เพิ่มขนาดฟอนต์ -->
-                <ul class="list-unstyled">
-                    <li><a href="#!" class="text-custom" style="border-bottom: 2px solid white; display: inline-block; width: 80%; padding-bottom: 5px; font-size: 1.2rem;">นักศึกษา & บุคลากร CE</a></li>
-                    <li><a href="#!" class="text-custom" style="border-bottom: 2px solid white; display: inline-block; width: 80%; padding-bottom: 5px; font-size: 1.2rem;">ศิษย์เก่า CE & ITE</a></li>
-                    <li><a href="#!" class="text-custom" style="border-bottom: 2px solid white; display: inline-block; width: 80%; padding-bottom: 5px; font-size: 1.2rem;">ครุภัณฑ์การศึกษา CE</a></li>
-                    <li><a href="#!" class="text-custom" style="border-bottom: 2px solid white; display: inline-block; width: 80%; padding-bottom: 5px; font-size: 1.2rem;">ฝึกงาน & สหกิจศึกษา</a></li>
-                    <li><a href="#!" class="text-custom" style="border-bottom: 2px solid white; display: inline-block; width: 80%; padding-bottom: 5px; font-size: 1.2rem;">กิจกรรมหลักสูตร</a></li>
-                    <li><a href="#!" class="text-custom" style="border-bottom: 2px solid white; display: inline-block; width: 80%; padding-bottom: 5px; font-size: 1.2rem;">หลักสูตร & แผนการเรียน CE</a></li>
-                    <li><a href="#!" class="text-custom" style="border-bottom: 2px solid white; display: inline-block; width: 80%; padding-bottom: 5px; font-size: 1.2rem;">แต้มบุญ</a></li>
-                </ul>
-            </div>
+    <!-- Popup HBD -->
+    <div class="popup-hbd">
+        <div class="popup-content">
+            <button class="close-btn" onclick="closePopup()">×</button>
+            <img src="assets/images/hbd.png" alt="Logo" class="logo5">
+            <h3>ขอให้โค้ดไม่บั๊ก และชีวิตไม่มี 404 นะ!</h3>
 
-            <!-- Second column: Contact Info -->
-            <div class="col-md-5">
-                <h5 class="text-white" style="font-size: 1.5rem;">ติดต่อเรา</h5> <!-- เพิ่มขนาดฟอนต์ -->
-                <ul class="list-unstyled" style="font-size: 1.2rem;"> <!-- เพิ่มขนาดฟอนต์ของข้อความในรายการ -->
-                    <li><i class="fas fa-map-marker-alt"></i> สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</li>
-                    <li><i class="fas fa-map-marker-alt"></i>วิทยาเขตชุมพรเขตรอุดมศักดิ์ จังหวัดชุมพร</li>
-                    <li><i class="fas fa-map-marker-alt"></i>17/1 หมู่6 ต.ชุมโค อ.ปะทิว จ.ชุมพร 86160</li>
-                    <li class="phone" style="margin-top: 30px;">
-                        <img src="assets/images/f.png" alt="Icon"
-                            style="width: 34px; height: auto; margin-right: 10px;">
-                        <i class="fas fa-phone"></i><a href="https://www.facebook.com/ComEngKMITLPCC">Computer Engineering KMITL, PCC</a> 
-                    </li>
-                </ul>
-            </div>            
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col">
+                        <div class="image-wrapper">
+                            <img src="assets/images/pink.png" alt="Pink" class="pink">
+                            <img src="assets/images/pro.jpg" alt="Profile" class="logo2">
+                            <p>นาย มิน ใจตี (มิน)</p>
+                            <p>วันเกิด: 01/01/2000</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="image-wrapper">
+                            <img src="assets/images/pink.png" alt="Pink" class="pink">
+                            <img src="assets/images/pro.jpg" alt="Profile" class="logo2">
+                            <p>นาย มิน ใจตี (มิน)</p>
+                            <p>วันเกิด: 01/01/2000</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="image-wrapper">
+                            <img src="assets/images/pink.png" alt="Pink" class="pink">
+                            <img src="assets/images/pro.jpg" alt="Profile" class="logo2">
+                            <p>นาย มิน ใจตี (มิน)</p>
+                            <p>วันเกิด: 01/01/2000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="assets/images/cake.png" alt="Cake" class="cake">
+            <img src="assets/images/box.png" alt="Box" class="cake2">
         </div>
     </div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function closePopup() {
+            document.querySelector('.popup-hbd').style.display = 'none';
+        }
+    </script>
+
+    <footer class="footer" style="background-color: #203864;">
+        <div class="container p-4">
+            <!-- First row for links -->
+            <div class="row justify-content-center">
+                <!-- First column: Quick Links -->
+                <div class="col-md-5">
+                    <h5 class="text-white" style="font-size: 1.5rem;">แนะนำ</h5> <!-- เพิ่มขนาดฟอนต์ -->
+                    <ul class="list-unstyled">
+                        <li><a href="#!" class="text-custom" style="border-bottom: 2px solid white; display: inline-block; width: 80%; padding-bottom: 5px; font-size: 1.2rem;">นักศึกษา & บุคลากร CE</a></li>
+                        <li><a href="#!" class="text-custom" style="border-bottom: 2px solid white; display: inline-block; width: 80%; padding-bottom: 5px; font-size: 1.2rem;">ศิษย์เก่า CE & ITE</a></li>
+                        <li><a href="#!" class="text-custom" style="border-bottom: 2px solid white; display: inline-block; width: 80%; padding-bottom: 5px; font-size: 1.2rem;">ครุภัณฑ์การศึกษา CE</a></li>
+                        <li><a href="#!" class="text-custom" style="border-bottom: 2px solid white; display: inline-block; width: 80%; padding-bottom: 5px; font-size: 1.2rem;">ฝึกงาน & สหกิจศึกษา</a></li>
+                        <li><a href="#!" class="text-custom" style="border-bottom: 2px solid white; display: inline-block; width: 80%; padding-bottom: 5px; font-size: 1.2rem;">กิจกรรมหลักสูตร</a></li>
+                        <li><a href="#!" class="text-custom" style="border-bottom: 2px solid white; display: inline-block; width: 80%; padding-bottom: 5px; font-size: 1.2rem;">หลักสูตร & แผนการเรียน CE</a></li>
+                        <li><a href="#!" class="text-custom" style="border-bottom: 2px solid white; display: inline-block; width: 80%; padding-bottom: 5px; font-size: 1.2rem;">แต้มบุญ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Second column: Contact Info -->
+                <div class="col-md-5">
+                    <h5 class="text-white" style="font-size: 1.5rem;">ติดต่อเรา</h5> <!-- เพิ่มขนาดฟอนต์ -->
+                    <ul class="list-unstyled" style="font-size: 1.2rem;"> <!-- เพิ่มขนาดฟอนต์ของข้อความในรายการ -->
+                        <li><i class="fas fa-map-marker-alt"></i> สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</li>
+                        <li><i class="fas fa-map-marker-alt"></i>วิทยาเขตชุมพรเขตรอุดมศักดิ์ จังหวัดชุมพร</li>
+                        <li><i class="fas fa-map-marker-alt"></i>17/1 หมู่6 ต.ชุมโค อ.ปะทิว จ.ชุมพร 86160</li>
+                        <li class="phone" style="margin-top: 30px;">
+                            <img src="assets/images/f.png" alt="Icon"
+                                style="width: 34px; height: auto; margin-right: 10px;">
+                            <i class="fas fa-phone"></i><a href="https://www.facebook.com/ComEngKMITLPCC">Computer Engineering KMITL, PCC</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

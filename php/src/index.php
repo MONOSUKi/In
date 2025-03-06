@@ -59,9 +59,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
             <form action="login.php" method="post">
                 <div class="input-box">
+                    <i class="fas fa-envelope"></i>
                     <input type="email" name="email" placeholder="Email" required />
                 </div>
                 <div class="input-box">
+                    <i class="fas fa-lock"></i>
                     <input type="password" name="password" placeholder="Password" required />
                 </div>
                 <button type="submit" class="Login">LOGIN</button>

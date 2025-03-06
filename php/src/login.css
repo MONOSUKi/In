@@ -1,227 +1,143 @@
+/* -------------------- Reset & Global Styles -------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans Thai', sans-serif;
+}
 
-/* Desktop (หน้าจอใหญ่) */
-@media screen and (min-width: 1024px) {
-    .container {
-      flex-direction: row; /* แสดงแบบแนวนอน */
-      padding: 50px;
-    }
-  
-    .left {
-      width: 60%;
-      padding: 100px;
-    }
-  
-    .right {
-      width: 40%;
-    }
-  }
-  
-  /* Tablet (หน้าจอขนาดกลาง) */
-  @media screen and (max-width: 1023px) {
-    .container {
-      flex-direction: column; /* แสดงแบบแนวตั้ง */
-      align-items: center;
-      padding: 30px;
-    }
-  
-    .left, .right {
-      width: 100%; /* ให้เต็มจอ */
-      padding: 20px;
-    }
-  
-    .login-box, .input-box {
-      width: 80%;
-    }
-  }
-  
-  /* Mobile (หน้าจอเล็ก) */
-  @media screen and (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      padding: 20px;
-    }
-  
-    .left {
-      padding: 10px;
-      text-align: center;
-    }
-  
-    .login-box, .input-box {
-      width: 90%;
-      margin: auto;
-    }
-  
-    .google-login {
-      width: 100%;
-    }
-  
-    .right {
-      display: none; /* ซ่อนพื้นหลังฝั่งขวาบนมือถือ */
-    }
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  .container {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-  }
-  .left {
-    flex: 70%;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    padding: 120px 100px 0 250px; /* เพิ่ม padding ซ้าย */
-  }
-  
-  .left img {
-    width: 250px;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* -------------------- Left Side (Login Form) -------------------- */
+.left {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.left img {
     position: absolute;
     top: 20px;
-    left: 20px;
-  }
-  
-  .content {
-    text-align: left; /* จัดข้อความชิดซ้าย */
-    margin-bottom: 10px;
-  }
-  
-  h1 {
-    font-family: 'Noto Sans Thai', sans-serif;
-    font-size: 42px;
-    font-weight: 1000;
-    color: #0f4c81;
-  }
-  
-  .login-box h2 {
-    padding: 10px;
-    width: 360px;
-    margin-top: 30px;
-    margin-left: 0;
-    margin-right: 100;
-  }
-  
-  .or-use-email {
-    font-family: 'Noto Sans Thai', sans-serif;
-    font-size: 18px;
-    color: #c5c5c5;
-    margin-top: 5ch; /* เพิ่มระยะห่างจากกล่องข้อความ */
-    padding-left: 85px;
-    padding-right: 20px;
-    font-weight: 300;
-  }
-  
-  .email-box {
-    display: flex;
+    left: 20px; 
+    padding: 10px; 
+}
+
+.left h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #203864;
+  margin-bottom: 20px;
+  position: absolute;
+  top: 160px; 
+  left: 230px;
+}
+
+/* Input Fields */
+.input-box {
+  display: flex;
+  align-items: center;
+  background: #e0e6eb;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 15px 0;
+  width: 500px;
+}
+
+.input-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 16px;
+  padding: 8px;
+}
+
+.input-box input::placeholder {
+  color: #888;
+}
+
+/* Login Button */
+.Login {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #203864;
+  border: none;
+  padding: 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 20px;
+  position: absolute;
+  top: 70%;
+  left: 32%;
+  transform: translate(-50%, -50%);
+}
+
+.Login:hover {
+  background-color: #1a2e50;
+}
+
+/* Error Message */
+.error {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* -------------------- Right Side (Welcome Section) -------------------- */
+.right {
+  flex: 1;
+  background: url('assets/images/bg.jpg'); /* พื้นหลังลวดลาย */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px;
+}
+
+.right h4 {
+  font-size: 32px;
+  font-weight: 300;
+  color: #ffb17d;
+}
+
+.right h5, .right h6 {
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: normal;
+}
+
+/* -------------------- Responsive Design -------------------- */
+@media screen and (max-width: 768px) {
+  .container {
     flex-direction: column;
-    gap: 15px;
-    margin-top: 30px;
-    width: 405px;
+    width: 90%;
+    height: auto;
   }
-  
-  .input-box {
-    display: flex;
-    align-items: center;
-    background-color: #E0E6EB;
-    border-radius: 8px;
-    padding: 10px;
-  }
-  
-  .input-box .icon {
-    font-size: 20px;
-    color: #666;
-    margin-right: 10px;
-  }
-  
-  .input-box input {
-    border: none;
-    outline: none;
-    background: none;
-    font-size: 16px;
-    color: #333;
-    width: 100%;
-  }
-  
-  .input-box input::placeholder {
-    color: #888;
-  }
-  
-  .for-get-pass {
-    font-family: 'Noto Sans Thai', sans-serif;
-    font-size: 18px;
-    color: #2c2c2c;
-    margin-top: 30px; /* เพิ่มระยะห่างจากกล่องข้อความ */
-    padding-left: 130px;
-    padding-right: 20px;
-    text-decoration: underline;
-  }
-  
-  .Login-box {
-    margin-top: 60px;
-    padding-left: 40px;
-  }
-  
-  .Login-box .Login {
-    color: white !important; /* สีข้อความ */
-    font-size: 18px;
-    font-weight: 300px;
-    font-family: 'Noto Sans Thai', sans-serif;
-    background-color: #203864; /* สีของปุ่ม */
-    border: none; /* ไม่มีขอบ */
-    padding: 18px 130px; /* ขนาดปุ่ม */
-    border-radius: 30px; /* มุมปุ่มมน */
-    cursor: pointer; /* เปลี่ยนเป็นมือเมื่อวางเมาส์ */
-  }
-  
-  .Login-box a {
-    border: none; /* ไม่มีขอบ */
-    cursor: pointer; /* เปลี่ยนเป็นมือเมื่อวางเมาส์ */
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-  }
-  
+
   .right {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 40%;
-    height: 100vh;
-    background-image: url('/assets/images/bg.jpg');
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
+    display: none; /* ซ่อนฝั่งขวาบนมือถือ */
   }
-  
-  .contents {
-    text-align: left;
-  }
-  
-  h4, h5, h6 {
-    font-family: 'Noto Sans Thai', sans-serif;
-    color: #FFB17D;
-  }
-  
-  h4 {
-    padding-left: 280px;
-    padding-top: 285px;
-    font-size: 45px;
-    font-weight: 1000;
-  }
-  
-  h5 {
-    padding-left: 200px;
-    padding-top: 12px;
-    font-size: 22px;
-    font-weight: 100px;
-  }
-  
-  h6 {
-    padding-left: 210px;
-    padding-top: 12px;
-    font-size: 22px;
-  }
+}

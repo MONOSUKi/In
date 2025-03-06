@@ -136,7 +136,7 @@
         </div>
 
         <div class="profile">
-            <img src="" alt="A" class="a">
+            <img src="assets/images/ohm.png" alt="A" class="a">
             <div class="info">
                 <div class="ti">
                     <div class="triangle"></div>
@@ -145,7 +145,7 @@
                 <div class="details">
                     <p><strong>ชื่อเล่น :</strong> พี่โอม</p>
                     <p><strong>วันเกิด :</strong> 03/06/1999</p>
-                    <p><strong>เบอร์ติดต่อ :</strong> 000-000-0000</p>
+                    <p><strong>เบอร์ติดต่อ :</strong> 093-647-1399</p>
                     <p><strong>ID LINE :</strong> iamohm1437</p>
                     <p><strong>E-MAIL :</strong> jaturong.ka&#64;kmitl.ac.th</p>
                 </div>

@@ -107,13 +107,13 @@ include 'db.php';
     </div>
     <div class="header-container">
         <span class="badge text-bg-primary header-content">
-            <img src="assets/images/t1.png" alt="Logo" class="logo">
+            <img src="assets/images/p.png" alt="Logo" class="logo">
             <h1 class="title">บุคลากร CE</h1>
         </span>
     </div>
 
     <div class="header-pic">
-        <img src="assets/images/teacher.png" alt="Pic" class="picture" onclick="window.location.href='/teacher.php'" style="cursor: pointer;">
+        <img src="assets/images/t1.png" alt="Pic" class="picture" onclick="window.location.href='/teacher.php'" style="cursor: pointer;">
     </div>
 
     <div class="header-personnel">

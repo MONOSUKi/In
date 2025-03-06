@@ -75,10 +75,10 @@
                 </div>
                 <div class="details">
                     <p><strong>ชื่อเล่น :</strong> อาจารย์จุ๋ม</p>
-                    <p><strong>วันเกิด :</strong> 32/12/1970</p>
-                    <p><strong>เบอร์ติดต่อ :</strong> 095-187-3785</p>
-                    <p><strong>ID LINE :</strong> aj.jum</p>
-                    <p><strong>E-MAIL :</strong> aj.rattikorn&#64;kmitl.ac.th</p>
+                    <p><strong>วันเกิด :</strong> 20/11/1974</p>
+                    <p><strong>เบอร์ติดต่อ :</strong> 087-711-0520</p>
+                    <p><strong>ID LINE :</strong> joomkmitlcpp</p>
+                    <p><strong>E-MAIL :</strong> rattikorn.so&#64;kmitl.ac.th</p>
                 </div>                
             </div>
         </div>
@@ -92,10 +92,10 @@
                 </div>
                 <div class="details">
                     <p><strong>ชื่อเล่น :</strong> อาจารย์อ๊อด</p>
-                    <p><strong>วันเกิด :</strong> 32/12/1970</p>
-                    <p><strong>เบอร์ติดต่อ :</strong> 095-187-3785</p>
-                    <p><strong>ID LINE :</strong> aj.ood</p>
-                    <p><strong>E-MAIL :</strong> aj.athasar&#64;kmitl.ac.th</p>
+                    <p><strong>วันเกิด :</strong> 09/10/1973</p>
+                    <p><strong>เบอร์ติดต่อ :</strong> 081-632-6779</p>
+                    <p><strong>ID LINE :</strong> iaudi</p>
+                    <p><strong>E-MAIL :</strong> athasart.na&#64;kmitl.ac.th</p>
                 </div>
             </div>
         </div>
@@ -109,10 +109,10 @@
                 </div>
                 <div class="details">
                     <p><strong>ชื่อเล่น :</strong> อาจารย์ติ๊ก</p>
-                    <p><strong>วันเกิด :</strong> 32/12/1970</p>
-                    <p><strong>เบอร์ติดต่อ :</strong> 095-187-3785</p>
-                    <p><strong>ID LINE :</strong> aj.silar</p>
-                    <p><strong>E-MAIL :</strong> aj.silar&#64;kmitl.ac.th</p>
+                    <p><strong>วันเกิด :</strong> 04/05/1982</p>
+                    <p><strong>เบอร์ติดต่อ :</strong> 081-747-4995</p>
+                    <p><strong>ID LINE :</strong> silarsi</p>
+                    <p><strong>E-MAIL :</strong> silar.si&#64;kmitl.ac.th</p>
                 </div>
             </div>
         </div>
@@ -126,10 +126,27 @@
                 </div>
                 <div class="details">
                     <p><strong>ชื่อเล่น :</strong> อาจารย์แฮปปี้</p>
-                    <p><strong>วันเกิด :</strong> 32/12/1970</p>
-                    <p><strong>เบอร์ติดต่อ :</strong> 095-187-3785</p>
-                    <p><strong>ID LINE :</strong> aj.happy</p>
-                    <p><strong>E-MAIL :</strong> aj.happy&#64;kmitl.ac.th</p>
+                    <p><strong>วันเกิด :</strong> 03/10/1979</p>
+                    <p><strong>เบอร์ติดต่อ :</strong> 089-500-2587</p>
+                    <p><strong>ID LINE :</strong> naphasra</p>
+                    <p><strong>E-MAIL :</strong> pisakorn.si&#64;kmitl.ac.th</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile">
+            <img src="" alt="A" class="a">
+            <div class="info">
+                <div class="ti">
+                    <div class="triangle"></div>
+                    <span>นายจตุรงค์ เกตุนิมิต</span>
+                </div>
+                <div class="details">
+                    <p><strong>ชื่อเล่น :</strong> พี่โอม</p>
+                    <p><strong>วันเกิด :</strong> 03/06/1999</p>
+                    <p><strong>เบอร์ติดต่อ :</strong> 000-000-0000</p> 
+                    <p><strong>ID LINE :</strong> iamohm1437</p>
+                    <p><strong>E-MAIL :</strong> jaturong.ka&#64;kmitl.ac.th</p>
                 </div>
             </div>
         </div>

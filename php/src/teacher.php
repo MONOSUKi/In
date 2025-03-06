@@ -108,7 +108,7 @@
                     <span>ว่าที่ ร.ต.ศิลา ศิริมาสกุล</span>
                 </div>
                 <div class="details">
-                    <p><strong>ชื่อเล่น :</strong> อาจารย์ศิลา</p>
+                    <p><strong>ชื่อเล่น :</strong> อาจารย์ติ๊ก</p>
                     <p><strong>วันเกิด :</strong> 32/12/1970</p>
                     <p><strong>เบอร์ติดต่อ :</strong> 095-187-3785</p>
                     <p><strong>ID LINE :</strong> aj.silar</p>

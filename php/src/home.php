@@ -20,11 +20,12 @@ include 'db.php';
 
 <body>
     <nav class="navbar1">
-        <div class="container-fluid">
+        <div class="container-fluid d-flex justify-content-between">
             <a class="navbar-brand">สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง วิทยาเขตชุมพรเขตรอุดมศักดิ์</a>
-            <a class="navbar-brand" href="index.php">ออกจากระบบ</a>
+            <a class="navbar-brand ms-auto" href="index.php">ออกจากระบบ</a>
         </div>
     </nav>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <!-- 3 ขีด Hamburger Menu (Dropdown) -->

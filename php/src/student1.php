@@ -35,12 +35,11 @@ if ($result === false) {
 
 <body>
     <nav class="navbar1">
-        <div class="container-fluid">
+        <div class="container-fluid d-flex justify-content-between">
             <a class="navbar-brand">สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง วิทยาเขตชุมพรเขตรอุดมศักดิ์</a>
-            <a class="navbar-brand" href="index.php">ออกจากระบบ</a>
+            <a class="navbar-brand ms-auto" href="index.php">ออกจากระบบ</a>
         </div>
     </nav>
-
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -165,39 +164,39 @@ if ($result === false) {
         </div>
 
         <div class="container text-center">
-    <div class="row gy-4">
-        <?php
-        // แสดงข้อมูล 55 ชุด
-        while ($row = $result->fetch_assoc()) {
-            // ดึงข้อมูลจากฐานข้อมูล
-            $studentId = $row['student_id'];
-            $fullname = $row['full_name'];
-            $nickname = $row['nickname'];
-            $birthdate = $row['birthdate'];
-            $phone = $row['phone'];
-        ?>
-            <div class="col">
-                <div class="card">
-                    <div class="card-header">
-                        <h5 class="card-title"><?php echo htmlspecialchars($studentId); ?></h5>
-                        <h5 class="card-text"><?php echo htmlspecialchars($fullname); ?></h5>
+            <div class="row gy-4">
+                <?php
+                // แสดงข้อมูล 55 ชุด
+                while ($row = $result->fetch_assoc()) {
+                    // ดึงข้อมูลจากฐานข้อมูล
+                    $studentId = $row['student_id'];
+                    $fullname = $row['full_name'];
+                    $nickname = $row['nickname'];
+                    $birthdate = $row['birthdate'];
+                    $phone = $row['phone'];
+                ?>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title"><?php echo htmlspecialchars($studentId); ?></h5>
+                                <h5 class="card-text"><?php echo htmlspecialchars($fullname); ?></h5>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>ชื่อเล่น:</strong> <?php echo htmlspecialchars($nickname); ?></p>
+                                <p><strong>วันเกิด:</strong> <?php echo htmlspecialchars($birthdate); ?></p>
+                                <p><strong>เบอร์โทร:</strong> <?php echo htmlspecialchars($phone); ?></p>
+                            </div>
+                            <img src="assets/images/pro.jpg" class="card-img-top" alt="Profile Image">
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <p><strong>ชื่อเล่น:</strong> <?php echo htmlspecialchars($nickname); ?></p>
-                        <p><strong>วันเกิด:</strong> <?php echo htmlspecialchars($birthdate); ?></p>
-                        <p><strong>เบอร์โทร:</strong> <?php echo htmlspecialchars($phone); ?></p>
-                    </div>
-                    <img src="assets/images/pro.jpg" class="card-img-top" alt="Profile Image">
-                </div>
+                <?php } ?>
             </div>
-        <?php } ?>
-    </div>
-</div>
+        </div>
 
-<?php
-// ปิดการเชื่อมต่อกับฐานข้อมูล
-$conn->close();
-?>
+        <?php
+        // ปิดการเชื่อมต่อกับฐานข้อมูล
+        $conn->close();
+        ?>
     </div>
 
     <footer class="footer" style="background-color: #203864;">

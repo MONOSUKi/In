@@ -107,7 +107,7 @@ include 'db.php';
     </div>
     <div class="header-container">
         <span class="badge text-bg-primary header-content">
-            <img src="assets/images/p.png" alt="Logo" class="logo">
+            <img src="assets/images/t1.png" alt="Logo" class="logo">
             <h1 class="title">บุคลากร CE</h1>
         </span>
     </div>

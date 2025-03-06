@@ -5,7 +5,7 @@ if (!isset($_SESSION['email'])) {
     exit();
 }
 include 'db.php';
-
+?>
 <!DOCTYPE html>
 <html lang="en">
 

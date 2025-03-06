@@ -133,11 +133,11 @@ $conn->close();
                 <label for="phone">เบอร์โทรศัพท์:</label>
                 <input type="text" id="phone" name="phone" value="<?php echo $row['phone']; ?>" disabled />
 
-                <label for="sex">ที่อยู่:</label>
-                <input type="text" id="sex" name="sex" value="<?php echo $row['address']; ?>" disabled />
+                <label for="address">ที่อยู่:</label>
+                <input type="text" id="address" name="address" value="<?php echo $row['address']; ?>" disabled />
 
-                <label for="phone">เบอร์ฉุกเฉิน:</label>
-                <input type="text" id="phone" name="phone" value="<?php echo $row['e_phone']; ?>" disabled />
+                <label for="e_phone">เบอร์ฉุกเฉิน:</label>
+                <input type="text" id="e_phone" name="e_phone" value="<?php echo $row['e_phone']; ?>" disabled />
 
             </form>
 

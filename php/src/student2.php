@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 }
 
 // เลือกข้อมูลจากฐานข้อมูล
-$sql = "SELECT student_id, full_name, nickname, birthdate, phone FROM user WHERE id = 2 LIMIT 59";
+$sql = "SELECT student_id, full_name, nickname, birthdate, phone, title ,address, e_phone FROM user WHERE id = 2 LIMIT 59";
 $result = $conn->query($sql);
 
 // ตรวจสอบว่า query สำเร็จหรือไม่
@@ -176,17 +176,22 @@ if ($result === false) {
                     $nickname = $row['nickname'];
                     $birthdate = $row['birthdate'];
                     $phone = $row['phone'];
+                    $title = $row['title'];
+                    $address = $row['address'];
+                    $e_phone = $row['e_phone'];
                 ?>
                     <div class="col">
                         <div class="card">
                             <div class="card-header">
                                 <h5 class="card-title"><?php echo htmlspecialchars($studentId); ?></h5>
-                                <h5 class="card-text"><?php echo htmlspecialchars($fullname); ?></h5>
+                                <h5 class="card-text"><?php echo htmlspecialchars($title); ?> <?php echo htmlspecialchars($fullname); ?></h5>
                             </div>
                             <div class="card-body">
                                 <p><strong>ชื่อเล่น:</strong> <?php echo htmlspecialchars($nickname); ?></p>
                                 <p><strong>วันเกิด:</strong> <?php echo htmlspecialchars($birthdate); ?></p>
                                 <p><strong>เบอร์โทร:</strong> <?php echo htmlspecialchars($phone); ?></p>
+                                <p><strong>เบอร์ฉุกเฉิน:</strong> <?php echo htmlspecialchars($e_phone); ?></p>
+                                <p><strong>ที่อยู่:</strong> <?php echo htmlspecialchars($address); ?></p>
                             </div>
                             <img src="assets/images/pro.jpg" class="card-img-top" alt="Profile Image">
                         </div>

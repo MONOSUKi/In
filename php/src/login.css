@@ -197,6 +197,10 @@
   }
   
   .Login-box .Login {
+    color: white !important; /* สีข้อความ */
+    font-size: 18px;
+    font-weight: 300px;
+    font-family: 'Noto Sans Thai', sans-serif;
     background-color: #203864; /* สีของปุ่ม */
     border: none; /* ไม่มีขอบ */
     padding: 18px 130px; /* ขนาดปุ่ม */
@@ -204,15 +208,12 @@
     cursor: pointer; /* เปลี่ยนเป็นมือเมื่อวางเมาส์ */
   }
   
-  .Login-box h3 {
-    color: white; /* สีข้อความ */
+  .Login-box a {
     border: none; /* ไม่มีขอบ */
     cursor: pointer; /* เปลี่ยนเป็นมือเมื่อวางเมาส์ */
-    font-size: 18px;
-    font-weight: 300px;
-    font-family: 'Noto Sans Thai', sans-serif;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
   }
   
   .right {

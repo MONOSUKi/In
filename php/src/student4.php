@@ -161,7 +161,7 @@ if ($result === false) {
         </div>
         <div class="w-container">
             <div class="welcome-box">
-                <h2 class="welcome-title">ชั้นปีที่ 1</h2>
+                <h2 class="welcome-title">ชั้นปีที่ 4</h2>
             </div>
         </div>
 

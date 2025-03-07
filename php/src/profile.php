@@ -103,11 +103,6 @@ $conn->close();
 
     <div class="container">
 
-        <div class="announcement">
-            <button class="announcement-header">ประกาศ</button>
-            <div class="announcement-content">ไม่มีประกาศในขณะนี้</div>
-        </div>
-
         <div class="info-card">
             <h2>ข้อมูลส่วนตัวนักศึกษา</h2>
             <form>

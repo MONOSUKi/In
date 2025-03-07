@@ -20,6 +20,8 @@ services:
       MYSQL_DATABASE: students
       MYSQL_USER: in
       MYSQL_PASSWORD: 123
+    volumes:
+      - ./mysql-scripts:/docker-entrypoint-initdb.d
     ports:
       - "9906:3306"
   phpmyadmin:

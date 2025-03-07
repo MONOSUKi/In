@@ -31,6 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $error = "กรุณากรอกข้อมูลให้ครบถ้วน!";
     }
 }
+
+$_SESSION['seen_popup'] = false;
 ?>
 
 <!DOCTYPE html>

@@ -1,11 +1,17 @@
 <?php
 session_start();
+
+// ตรวจสอบว่าผู้ใช้ได้ล็อกอินหรือยัง
 if (!isset($_SESSION['email'])) {
-    header("Location: login.php");
+    // ถ้าไม่มีกระบวนการล็อกอิน ให้เปลี่ยนเส้นทางไปที่หน้าเข้าสู่ระบบ
+    header("Location: index.php");
     exit();
 }
-include 'db.php';
+
+// เนื้อหาของหน้า home.php ที่ผู้ใช้สามารถเข้าถึงได้เมื่อเข้าสู่ระบบแล้ว
+//echo "ยินดีต้อนรับคุณ, " . $_SESSION['email'];
 ?>
+
 
 <?php
 // เชื่อมต่อฐานข้อมูล
@@ -57,7 +63,7 @@ $conn->close();
     <nav class="navbar1">
         <div class="container-fluid d-flex justify-content-between">
             <a class="navbar-brand">สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง วิทยาเขตชุมพรเขตรอุดมศักดิ์</a>
-            <a class="navbar-brand ms-auto" href="index.php">ออกจากระบบ</a>
+            <a class="navbar-brand ms-auto" href="logout.php">ออกจากระบบ</a>
         </div>
     </nav>
 
@@ -156,7 +162,7 @@ $conn->close();
     </div>
 
     <!-- Popup HBD -->
-    <?php if (!empty($todayBirthdays)): ?>
+    <?php if (!empty($todayBirthdays) && isset($_SESSION['email']) && $_SESSION['seen_popup'] === false): ?>
         <div class="popup-hbd">
             <div class="popup-content">
                 <button class="close-btn" onclick="closePopup()">×</button>
@@ -189,6 +195,8 @@ $conn->close();
         <script>
             function closePopup() {
                 document.querySelector('.popup-hbd').style.display = 'none';
+                // ตั้งค่า session เพื่อบอกว่า popup ได้แสดงแล้ว
+                <?php $_SESSION['seen_popup'] = true; ?>
             }
         </script>
     <?php endif; ?>

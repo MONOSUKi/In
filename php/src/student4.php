@@ -37,7 +37,7 @@ if ($result === false) {
     <nav class="navbar1">
         <div class="container-fluid d-flex justify-content-between">
             <a class="navbar-brand">สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง วิทยาเขตชุมพรเขตรอุดมศักดิ์</a>
-            <a class="navbar-brand ms-auto" href="index.php">ออกจากระบบ</a>
+            <a class="navbar-brand ms-auto" href="logout.php">ออกจากระบบ</a>
         </div>
     </nav>
 

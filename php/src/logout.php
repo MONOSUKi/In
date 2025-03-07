@@ -1,10 +1,13 @@
 <?php
 session_start();
+
+// ล้างข้อมูลทั้งหมดใน session
+session_unset();
+
+// ลบ session
 session_destroy();
-<<<<<<< HEAD
-header("Location: index.html");
-=======
-header("Location: login.php");
->>>>>>> aaeb8cda77dd34f35e93fe264fd5d4464e1dbbc2
+
+// เปลี่ยนเส้นทางไปที่หน้าเข้าสู่ระบบ
+header("Location: index.php");
 exit();
 ?>

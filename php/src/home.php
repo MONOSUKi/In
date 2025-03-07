@@ -6,6 +6,41 @@ if (!isset($_SESSION['email'])) {
 }
 include 'db.php';
 ?>
+
+<?php
+// เชื่อมต่อฐานข้อมูล
+$servername = "db";  // ชื่อเซิร์ฟเวอร์
+$username = "root";   // ชื่อผู้ใช้ฐานข้อมูล
+$password = "123456"; // รหัสผ่าน
+$dbname = "students"; // ชื่อฐานข้อมูล
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// รับวันที่ปัจจุบัน
+$currentDate = date('m-d'); // ใช้รูปแบบ MM-DD เพื่อเทียบกับฐานข้อมูล
+
+// ดึงข้อมูลวันเกิดจากฐานข้อมูล
+$sql = "SELECT full_name, DATE_FORMAT(birthdate, '%m-%d') as birthdate FROM user WHERE DATE_FORMAT(birthdate, '%m-%d') = '$currentDate'";
+$result = $conn->query($sql);
+
+if (!$result) {
+    die("Query failed: " . $conn->error);
+}
+
+$todayBirthdays = [];
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $todayBirthdays[] = $row;
+    }
+}
+
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -121,50 +156,42 @@ include 'db.php';
     </div>
 
     <!-- Popup HBD -->
-    <div class="popup-hbd">
-        <div class="popup-content">
-            <button class="close-btn" onclick="closePopup()">×</button>
-            <img src="assets/images/hbd.png" alt="Logo" class="logo5">
-            <h3>ขอให้โค้ดไม่บั๊ก และชีวิตไม่มี 404 นะ!</h3>
+    <?php if (!empty($todayBirthdays)): ?>
+        <div class="popup-hbd">
+            <div class="popup-content">
+                <button class="close-btn" onclick="closePopup()">×</button>
+                <img src="assets/images/hbd.png" alt="Logo" class="logo5">
+                <h3>ขอให้โค้ดไม่บั๊ก และชีวิตไม่มี 404 นะ!</h3>
+                <?php
+                $currentDate = date('j F Y'); // วัน เดือน ปี เช่น 7 มีนาคม 2025
+                echo "<h3>Today: $currentDate</h3>";
+                ?>
 
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col">
-                        <div class="image-wrapper">
-                            <img src="assets/images/pink.png" alt="Pink" class="pink">
-                            <img src="assets/images/pro.jpg" alt="Profile" class="logo2">
-                            <p>นาย มิน ใจตี (มิน)</p>
-                            <p>วันเกิด: 01/01/2000</p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="image-wrapper">
-                            <img src="assets/images/pink.png" alt="Pink" class="pink">
-                            <img src="assets/images/pro.jpg" alt="Profile" class="logo2">
-                            <p>นาย มิน ใจตี (มิน)</p>
-                            <p>วันเกิด: 01/01/2000</p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="image-wrapper">
-                            <img src="assets/images/pink.png" alt="Pink" class="pink">
-                            <img src="assets/images/pro.jpg" alt="Profile" class="logo2">
-                            <p>นาย มิน ใจตี (มิน)</p>
-                            <p>วันเกิด: 01/01/2000</p>
-                        </div>
+
+                <div class="container text-center">
+                    <div class="row">
+                        <?php foreach ($todayBirthdays as $student): ?>
+                            <div class="col">
+                                <div class="image-wrapper">
+                                    <img src="assets/images/pink.png" alt="Pink" class="pink">
+                                    <img src="assets/images/pro.jpg" alt="Profile" class="logo2">
+                                    <p><?php echo $student['full_name']; ?></p>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
+                <img src="assets/images/cake.png" alt="Cake" class="cake">
+                <img src="assets/images/box.png" alt="Box" class="cake2">
             </div>
-            <img src="assets/images/cake.png" alt="Cake" class="cake">
-            <img src="assets/images/box.png" alt="Box" class="cake2">
         </div>
-    </div>
 
-    <script>
-        function closePopup() {
-            document.querySelector('.popup-hbd').style.display = 'none';
-        }
-    </script>
+        <script>
+            function closePopup() {
+                document.querySelector('.popup-hbd').style.display = 'none';
+            }
+        </script>
+    <?php endif; ?>
 
     <footer class="footer" style="background-color: #203864;">
         <div class="container p-4">
